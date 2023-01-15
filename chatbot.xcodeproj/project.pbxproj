@@ -14,6 +14,7 @@
 		F05C676F297489DA00C970A8 /* chatbotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05C676E297489DA00C970A8 /* chatbotTests.swift */; };
 		F05C6779297489DA00C970A8 /* chatbotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05C6778297489DA00C970A8 /* chatbotUITests.swift */; };
 		F05C677B297489DA00C970A8 /* chatbotUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05C677A297489DA00C970A8 /* chatbotUITestsLaunchTests.swift */; };
+		F05C678A29748E8500C970A8 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = F05C678929748E8500C970A8 /* OpenAISwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F05C678A29748E8500C970A8 /* OpenAISwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +145,9 @@
 			dependencies = (
 			);
 			name = chatbot;
+			packageProductDependencies = (
+				F05C678929748E8500C970A8 /* OpenAISwift */,
+			);
 			productName = chatbot;
 			productReference = F05C675A297489D500C970A8 /* chatbot.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +220,10 @@
 				Base,
 			);
 			mainGroup = F05C6751297489D500C970A8;
+			packageReferences = (
+				F05C678729748BDD00C970A8 /* XCRemoteSwiftPackageReference "OpenAISwift" */,
+				F05C678829748E8500C970A8 /* XCRemoteSwiftPackageReference "OpenAISwift" */,
+			);
 			productRefGroup = F05C675B297489D500C970A8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -577,6 +586,33 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F05C678729748BDD00C970A8 /* XCRemoteSwiftPackageReference "OpenAISwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adamrushy/OpenAISwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		F05C678829748E8500C970A8 /* XCRemoteSwiftPackageReference "OpenAISwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adamrushy/OpenAISwift";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F05C678929748E8500C970A8 /* OpenAISwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F05C678829748E8500C970A8 /* XCRemoteSwiftPackageReference "OpenAISwift" */;
+			productName = OpenAISwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F05C6752297489D500C970A8 /* Project object */;
 }
