@@ -14,12 +14,12 @@ final class ViewModel: ObservableObject{
     private var client: OpenAISwift?
     
     func setup () {
-        client = OpenAISwift(authToken: "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")
+        client = OpenAISwift(authToken: "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")
         
     }
     
     func send (text: String, completion: @escaping(String) -> Void){
-        client?.sendCompletion(with: text,maxTokens: 500, completionHandler: {result in
+        client?.sendCompletion(with: text, maxTokens: 1000, completionHandler: {result in
             
             switch result {
             case .success(let model):
@@ -62,7 +62,7 @@ struct ContentView: View {
     }
     
     func send(){
-        guard text.trimmingCharacters(in: .whitespaces).isEmpty else {
+        guard !text.trimmingCharacters(in: .whitespaces).isEmpty else {
             return
         }
         
